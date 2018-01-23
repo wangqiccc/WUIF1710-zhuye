@@ -1,0 +1,168 @@
+@import "base.css";
+.section {
+    /*font-size: 60px;*/
+}
+#menu {
+    width: 100%;
+    height: 89px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #000;
+    background: rgba(0,0,0,0.6);
+    z-index:9999;
+}
+.qu{
+    width: 1246px;
+    height: 27px;
+    margin: 0 auto;
+    margin-top: 27px;
+    padding: 5px;
+}
+.qu .logo{
+    width: 100px;
+    height: 100%;
+    float: left;
+}
+.qu  ul {
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    float: right;
+}
+#menu li{
+    width:100px;
+}
+#menu li.active{
+    /*background: ;*/
+}
+#menu a{
+    color:#8CB7B7;
+    font-size:16px;
+    line-height:30px;
+}
+#menu a:hover{
+    color: #fff;
+}
+#menu a.active{
+    color: #fff;
+}
+.two-left{
+    width:50%;
+    height:100%;
+    background:#000;
+    float:left;
+    transform:translateX(-1000px);
+    transition:.5s all;
+    overflow: hidden;
+    position: relative;
+}
+.two-left h2,.two-right h2{
+    font-size: 36px;
+    color: #ffffff;
+    margin-top: 83px;
+}
+.two-left h2{
+    float: right;
+}
+.two-left p,.two-right p{
+    font-size: 18px;
+    color: #fff;
+}
+.two-left p{
+    position: absolute;
+    right: 0;
+    top:130px;
+    font-size: 18px;
+    z-index: 999;
+}
+.two-right{
+    width:50%;
+    height:100%;
+    background: #000;
+    float:left;
+    transform:translateX(1000px);
+    transition:.5s all;
+    position: relative;
+}
+.two-right h3{
+    font-size: 36px;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.swiper-container{
+    width: 1349px;
+    height: 571px;
+    background: #ff41de;
+    position: relative;
+}
+.swiper-slide{
+    width: 1349px;
+    height: 571px;
+}
+.swiper-slide img{
+    width: 1349px;
+    height: 571px;
+    display: block;
+}
+.swiper-button-next,.swiper-button-prev{
+    width: 27px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top:auto ;
+    margin-bottom: auto;
+}
+.swiper-button-next{
+    right: 33px;
+}
+.swiper-button-prev{
+    left: 10px;
+}
+.swiper-slide h2,.swiper-slide p{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+}
+.swiper-slide h2{
+    top: 100px;
+    left: 35vw;
+}
+.swiper-slide p{
+    top: 140px;
+    left: 20vw;
+}
+.pl{
+    width: 555px;
+    height: 344px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    background: #333333;
+}
+.lp{
+    position: absolute;
+    left: 10px;
+    top: 32%;
+    /*width: 100%;*/
+    height: 80%;
+}
+.pl img{
+    width: 555px;
+    height: 344px;
+    display: block;
+}
+.lp h3{
+    font-size: 36px;
+    color: #fff;
+    margin-left: 20px;
+}
+.lp  span{
+    font-size:18px;
+    color: #fff;
+    margin-left: 10px;
+    line-height: 50px;
+}

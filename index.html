@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<div id="container">
+    <div id="menu">
+        <div class="qu">
+            <div class="logo"></div>
+            <ul>
+                <li data-menuanchor="p1"><a href="#p1" class="active">关于我</a></li>
+                <li data-menuanchor="p2"><a href="#p2">掌握技能</a></li>
+                <li data-menuanchor="p3"><a href="#p3">我的作品</a></li>
+                <li data-menuanchor="p4"><a href="#p4">联系我</a></li>
+                <li data-menuanchor="p5"><a href="#p5">我的目标</a></li>
+             </ul>
+        </div>
+    </div>
+    <div class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/50D58PICFuz.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/t016cb8c3f661c10b5b_02.png" alt="">
+                    <h2>WELCOME TO OUR WORLD</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="two-left">
+            <h2>ABOU</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <div class="pl">
+                <img src="img/20106161714177847.jpg" alt="">
+            </div>
+        </div>
+        <div class="two-right">
+            <h2>T ME</h2>
+            <p>Suspendisse in facilisis ex, vitae maximus diam. Maecenas nisl dui.</p>
+            <div class="lp">
+                    <h3>自我介绍</h3>
+                    <span>  我叫武小腾来自太原市娄烦县,专业扎实，看书是我最大的享受，钻研电脑让我感觉其乐无穷。 我做事踏实，再小的事情我也要一丝不苟地完成。重要的是，我有一种执著钻研的精神，一种不弄明白绝不罢休的劲头。我喜欢和同事们在一起完成工作，喜欢和别人分享快乐，乐观是我最大的心里医生掌握photoshop,html,和css等多项技能,来到贵公司我希望应聘全站工程师的职位,我曾经做过一些电商之类的网站,这个是我自己个人网页,希望能够加入贵公司和大家一起努力</span>
+            </div>
+        </div>
+    </div>
+    <div class="section">3</div>
+    <div class="section">4</div>
+    <div class="section">5</div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    $("#container").fullpage({
+        verticalCentered: false,
+        anchors: ["p1", "p2", "p3", "p4", "p5"],
+        sectionsColor: ["#ccc", "yellow", "red", "#f88", "#99f"],
+        scrollingSpeed: 1000,
+        navigation: true,
+        navigationPosition: "right",
+        navigationTooltips: ["111", "222", "333", "444"],
+        continuousVertical: true,
+        fixedElements:"#menu",
+        menu:"#menu",
+        afterLoad:function(anchor,index){
+            if(index===2){
+             $(".two-left").css("transform","translateX(0)");
+             $(".two-right").css("transform","translateX(0)");
+            }
+        },
+        onLeave:function(index){
+            if(index===2){
+                $(".two-left").css("transform","translateX(-1000px)");
+                $(".two-right").css("transform","translateX(1000px)");
+            }
+        }
+    });
+</script>
+</html>
