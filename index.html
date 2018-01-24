@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery.fullPage.css">
+    <style>
+        .section {
+            font-size: 60px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #menu {
+            width: 100%;
+            height: 49px;
+            position: fixed;
+            left: 0;
+            top: 20px;
+            z-index:9999;
+            border-bottom: 1px solid #fff;
+        }
+        #menu ul {
+            width: 1000px;
+            height: 49px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #menu li:nth-of-type(1){
+            width: 230px;
+            height: 49px;
+            float: left;
+            margin-right: 240px;
+        }
+        #menu li{
+            width: 100px;
+            line-height: 49px;
+            float: left;
+        }
+        #menu li .logo img{
+            width: 51px;
+            height: 51px;
+            display: block;
+            float: left;
+        }
+        #menu li .logo span{
+            font-family: "Microsoft Yahei", tahoma, arial, "Hiragino Sans GB";
+            font-size: 20px;
+            line-height: 50px;
+            color: #fff;
+            display: block;
+            float: left;
+            margin-left: 20px;
+        }
+        #menu a{
+            color:#fff;
+            font-size:15px;
+            line-height:50px;
+            text-decoration: none;
+        }
+        #menu a:hover{
+            color: coral;
+            font-weight: 600;
+            transition: all 1s;
+        }
+        .two-left{
+            width:80%;
+            height:100%;
+            background:skyblue;
+            float:left;
+            transform:translateX(-1000px);
+            transition:.5s all;
+        }
+        .two-right{
+            width:20%;
+            height:100%;
+            background:skyblue;
+            float:left;
+            transform:translateX(1000px);
+            transition:.5s all;
+        }
+        .section:nth-of-type(1){
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .img-box{
+            width: 300%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .img-box img{
+            display: block;
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+        .text-box{
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 35%;
+            margin: auto;
+        }
+        .text-box p{
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+        }
+        .text-box p:nth-of-type(2){
+            font-size: 22px;
+            font-family: 'Cinzel Decorative', cursive;
+            color: #fff;
+            text-align: center;
+        }
+        .text-bottom{
+            width: 500px;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
+        .line{
+            width: 150px;
+            height: 1px;
+            background: #fff;
+            margin-top: 25px;
+        }
+        .text-bottom p{
+            font-size: 20px;
+            line-height: 50px;
+            font-family: 'Cinzel Decorative', cursive;
+        }
+        .button{
+            background: #173C4F;
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+            left: 44%;
+            bottom: 20%;
+            border-radius: 5px;
+            font-family: "Microsoft Yahei", tahoma, arial, "Hiragino Sans GB";
+            display: block;
+        }
+        .button:hover{
+            background: rgba(0,0,0,0.5);
+            transition: all 1s;
+        }
+        .me-box{
+            width: 700px;
+            height: 450px;
+            border: 8px solid #FEF6F6;
+            border-radius: 20px;
+            margin: 120px auto;
+        }
+        .me-img{
+            width: 600px;
+            height: 350px;
+            margin: 50px;
+        }
+        .me-img img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .my-box{
+            width: 486px;
+            height: 252px;
+            background:rgba(255,255,255,0.7);
+            margin-left: -550px;
+            margin-top: 90%;
+        }
+        .my-left{
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+        .my-left ul{
+            width: 100%;
+            height: 50%;
+            padding-top: 20px;
+        }
+        .my-left ul li{
+            font-size: 12px;
+            color: #333;
+            line-height: 24px;
+            font-weight: 600;
+            padding-left: 20px;
+        }
+        .jindu{
+            width: 100%;
+            height: 50%;
+            padding-top: 15px;
+            padding-left: 23px;
+        }
+        .jindu-one{
+            float: left;
+            margin-bottom: 8px;
+
+        }
+        .jindu-one span{
+            font-size: 12px;
+            float: left;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        .jindu-one div{
+            width: 120px;
+            height: 5px;
+            background: #E9431A;
+            float: left;
+            margin-top:5px;
+        }
+        .last div{
+            background: #EAE7EC;
+            height: 5px;
+            position: relative;
+        }
+        .last div div{
+            background:#E9431A ;
+            width: 70px;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        .my-right{
+            width: 50%;
+            height: 100%;
+            padding-top: 20px;
+            float: left;
+        }
+        .fenlei{
+            width: 100%;
+            height: 33px;
+            margin-left:  15px;
+        }
+        .circle{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid #000000;
+            float: left;
+            margin-right: 20px;
+        }
+        .circle2{
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #192D5A;
+            margin: 4px;
+            color: #fff;
+            text-align: center;
+            line-height: 22px;
+            font-size: 8px;
+        }
+        .cir-2{
+            background: #EC8B16;
+        }
+        .cir-3{
+            background: #B6D35C;
+        }
+        .cir-4{
+            background: #D6C83E;
+        }
+        .my-right h2{
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin-top: 20px;
+        }
+        .my-right p{
+            font-size: 12px;
+            text-align: left;
+            line-height: 22px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        .my-right span{
+            height: 16px;
+            font-size: 10px;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;
+            background: skyblue;
+            border-radius: 4px;
+            display: block;
+            float: left;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+        .my-right span:nth-of-type(2){
+            background: yellowgreen;
+        }
+        .my-right span:nth-of-type(3){
+            background: orangered;
+        }
+        .my-right span:nth-of-type(4){
+            background: hotpink;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#p1" class="logo">
+                    <img src="img/logo.png" alt="">
+                    <span>ZhangXueYun</span>
+                </a>
+            </li>
+            <li data-menuanchor="p1"  class="active">
+                <a href="#p1">首页</a>
+            </li>
+            <li data-menuanchor="p2">
+                <a href="#p2">关于我</a>
+            </li>
+            <li data-menuanchor="p3">
+                <a href="#p3">技能展示</a>
+            </li>
+            <li data-menuanchor="p4">
+                <a href="#p4">项目经验</a>
+            </li>
+            <li data-menuanchor="p5">
+                <a href="#p5">联系方式</a>
+            </li>
+        </ul>
+    </div>
+    <div class="section">
+        <div class="img-box">
+            <img src="img/bg.jpg" alt="">
+            <img src="img/bg.jpg" alt="">
+            <img src="img/bg.jpg" alt="">
+        </div>
+        <div class="text-box">
+            <p>Gril form Small Tawn</p>
+            <p>我不太肯定我的方向，但我希望自己走的远一点。</p>
+            <div class="text-bottom">
+                <div class="line"></div>
+                <p>▪&nbsp;&nbsp;遇见更好的自己&nbsp;&nbsp;▪</p>
+                <div class="line"></div>
+            </div>
+        </div>
+        <a class="button">Meet&nbsp;&nbsp; Me</a>
+    </div>
+    <div class="section">
+        <div class="two-left">
+            <div class="me-box">
+                <div class="me-img">
+                    <img src="img/gallery_06.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="two-right">
+            <div class="my-box">
+                <div class="my-left">
+                    <ul>
+                        <li>•&nbsp;&nbsp;专业：软件技术</li>
+                        <li>•&nbsp;&nbsp;学历：大专</li>
+                        <li>•&nbsp;&nbsp;户籍：山西运城</li>
+                        <li>•&nbsp;&nbsp;星座：巨蟹</li>
+                        <li>•&nbsp;&nbsp;出生年月：1997-07</li>
+                    </ul>
+                    <div class="jindu">
+                        <div class="jindu-one">
+                            <span>审美能力</span>
+                            <div></div>
+                        </div>
+                        <div class="jindu-one">
+                            <span>沟通能力</span>
+                            <div></div>
+                        </div>
+                        <div class="jindu-one last">
+                            <span>工作经验</span>
+                            <div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-right">
+                    <div class="fenlei">
+                        <div class="circle">
+                            <div class="circle2">PS</div>
+                        </div>
+                        <div class="circle">
+                            <div class="circle2 cir-2">H5</div>
+                        </div>
+                        <div class="circle">
+                            <div class="circle2 cir-3">JS</div>
+                        </div>
+                        <div class="circle">
+                            <div class="circle2 cir-4">PHP</div>
+                        </div>
+                    </div>
+                    <h2>关于本人</h2>
+                    <p>我把工作看作一个学习的过程，用心，真诚，勤奋，时刻都能使我进步。我相信认真做事，用心交流，开启脑洞，有耐心，与团队合作，一定能塑造出完美的作品。</p>
+                    <span>责任心</span>
+                    <span>创造力</span>
+                    <span>高效工作率</span>
+                    <span>强效学习力</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">3</div>
+    <div class="section">4</div>
+    <div class="section">5</div>
+</div>
+</body>
+<script src="jquery-3.2.1.js"></script>
+<!--<script src="jquery.easing.min.js"></script>-->
+<script src="jquery.fullPage.js"></script>
+<script>
+    $("#container").fullpage({
+        verticalCentered: false,
+        anchors: ["p1", "p2", "p3", "p4", "p5"],
+        sectionsColor: ["#fff", "#fff", "red", "#f88", "#99f"],
+        scrollingSpeed: 1000,
+        navigation: true,
+        navigationPosition: "left",
+        navigationTooltips: ["111", "222", "333", "444"],
+        continuousVertical: true,
+        fixedElements:"#menu",
+        menu:"#menu",
+        afterLoad:function(anchor,index){
+            if(index===2){
+                $(".two-left").css("transform","translateX(0)");
+                $(".two-right").css("transform","translateX(0)");
+            }
+        },
+        onLeave:function(index){
+            if(index===2){
+                $(".two-left").css("transform","translateX(-1000px)");
+                $(".two-right").css("transform","translateX(1000px)");
+            }
+        }
+    });
+    let n=0;
+    let imgs=document.querySelector(".img-box");
+    function fn(){
+        n++;
+        if(n<10000000){
+            requestAnimationFrame(fn);
+        }
+        imgs.style.marginLeft=-n/6+"px";
+    }
+    fn();
+</script>
+</html>
