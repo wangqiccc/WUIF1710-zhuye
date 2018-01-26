@@ -93,7 +93,7 @@
 }
 
 .swiper-container{
-    width: 100%;
+    width: 1366px;
     height: 100%;
     /*background: #ff41de;*/
     position: relative;
@@ -107,7 +107,7 @@
     height: 662px;
     display: block;
 }
-.swiper-button-next,.swiper-button-prev{
+.swiper-next,.swiper-prev{
     width: 27px;
     height: 44px;
     position: absolute;
@@ -115,12 +115,18 @@
     bottom: 0;
     margin-top:auto ;
     margin-bottom: auto;
+    color: #fff ;
+    text-align: center;
+    line-height: 44px;
+    font-size: 60px;
+    z-index: 999;
 }
-.swiper-button-next{
+.swiper-next{
     right: 33px;
 }
-.swiper-button-prev{
+.swiper-prev{
     left: 10px;
+    margin-left: 0;
 }
 .swiper-slide h2,.swiper-slide p{
     font-size: 30px;
@@ -148,7 +154,6 @@
     position: absolute;
     left: 10px;
     top: 32%;
-    /*width: 100%;*/
     height: 80%;
 }
 .pl img{
@@ -174,44 +179,38 @@
 .ta{
     width: 100%;
     height: 468px;
-    background: #fff;
     padding: 110px 0;
-    background: #fff;
+    background: rgba(0,0,0,0.6);
 }
 .container{
     width: 1170px;
     height: 468px;
-    /* background: yellow; */
     margin: 0 auto;
 }
 .container .muxu{
     max-width: 600px;
-    /* height: 90px; */
-     /* background: #F3F3F4; */
     margin: 0 auto;
     margin-bottom: 56px;
 }
 .muxu h1{
     font-size: 36px;
-    color: #0d0d0d;
+    color: #fff;
     text-align: center;
 }
 .muxu p{
     font-size: 14px;
-    color:  #55575d;
+    color:  #fff;
     line-height: 22px;
     text-align: center;
 }
 .row{
     width: 1170px;
     height: 321px;
-    /* background: green; */
     position: relative;
 }
 .row .row_left{
     width: 752px;
     height: 100%;
-    /* background: red; */
     float: left;
 }
 
@@ -258,19 +257,16 @@ textarea{
 .row_right{
     width: 390px;
     height: 270px;
-    /* background: blue; */
     float: right;
 }
 .hans{
     width: 100%;
-    /* height: 60px; */
     display: flex;
     justify-content: flex-start;
 }
 .hans .hang{
     width:360px;
     height: 60%;
-    background: #fff;
     margin-bottom: 30px;
     display: flex;
     justify-content: flex-start;
@@ -278,25 +274,33 @@ textarea{
 .hang .fax{
     width:60px;
     height: 60px;
-    background: #F6F6F6;
     line-height: 60px;
     text-align: center;
 }
 .fax i{
     font-size:36px; 
-    color:#55575D;
+    color:#fff;
     display: block;
 }
 .hang p{
     font-size: 16px;
-    color: #959595;
-    /* line-height: 26px; */
-    /* width: 285px; */
+    color: #fff;
 }
 .spq,.set{
     width: 100%;
     height: 100%;
     background: url("../img/094343f4oyq4o89z1u9ffz.jpg") center/cover;
+    overflow: hidden;
+}
+.set{
+    width: 100%;
+    height: 100%;
+    background: url("../img/000.jpg") center/cover;
+}
+.ops{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
     overflow: hidden;
 }
 .scene{
@@ -315,9 +319,9 @@ textarea{
     width: 300px;
     height: 300px;
     margin: 150px 200px;
-    background: #ccc;
+    /*background: #ccc;*/
     transform-style:preserve-3d;
-    transition: all 1s;
+    transition: all 0.5s;
     transform-origin: center center -300px;
     position: relative;
     transform: scale(0);
@@ -499,5 +503,69 @@ textarea{
     width: 100%;
     height: 100%;
     background: url("../img/1295829359304z318hn37kb.jpg") center/cover;
+    overflow: hidden;
+}
+.jie{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+.jie h1{
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+}
+.jie p{
+    font-size: 14px;
+    color: #fff;
+    line-height: 22px;
+    text-align: center;
+}
+.item{
+    /*background: #F3F3F4;*/
+    width: 1170px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.item .web{
+    width: 360px;
+    height: 218px;
+    /*background: #fff;*/
+    background: rgba(0,0,0,0.6);
+    float: left;
+    transition:all 0.3s;
+    margin-bottom: 30px;
+}
+.item .web:hover{
+    box-shadow: 0px 4px 16px 0px #808080;
+}
+.web .mc{
+    font-size:32px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    margin-top: 43px;
+
+}
+.web h4{
+    font-size: 24px;
+    color:#fff;
+    text-align: center;
+}
+.web p{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.rw{
+    width: 100%;
+    height: 100%;
+    background: url("../img/2122530ltjujxlwrjtult3.jpg") center/cover;
     overflow: hidden;
 }
