@@ -18,11 +18,11 @@
         <div class="qu">
             <div class="logo"></div>
             <ul>
-                <li data-menuanchor="p1"><a href="#p1" class="active">关于我</a></li>
-                <li data-menuanchor="p2"><a href="#p2">掌握技能</a></li>
+                <li data-menuanchor="p1"><a href="#p1" class="active">首页</a></li>
+                <li data-menuanchor="p2"><a href="#p2">关于我</a></li>
                 <li data-menuanchor="p3"><a href="#p3">我的作品</a></li>
-                <li data-menuanchor="p4"><a href="#p4">联系我</a></li>
-                <li data-menuanchor="p5"><a href="#p5">我的目标</a></li>
+                <li data-menuanchor="p4"><a href="#p4">掌握技能</a></li>
+                <li data-menuanchor="p5"><a href="#p5">联系我</a></li>
             </ul>
         </div>
     </div>
@@ -31,20 +31,18 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="img/1214905.jpg" alt="">
-                    <h2 data-swiper-parallax="-300">WELCOME TO OUR WORLD</h2>
-                    <p data-swiper-parallax="-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>WELCOME TO OUR WORLD</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/t016cb8c3f661c10b5b_02.png" alt="">
-                    <!--<h2>WELCOME TO OUR WORLD</h2>-->
-                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
                 </div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
             <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-next">&gt;</div>
+            <div class="swiper-prev">&lt;</div>
         </div>
     </div>
     <div class="section">
@@ -68,6 +66,7 @@
     </div>
     <div class="section">
         <div class="set">
+            <div class="ops">
             <div class="scene">
                 <div class="xiamu">
                     <h1>我的作品</h1>
@@ -150,7 +149,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="neib" href="">
+                        <a class="neib" href="https://wuxaioteng.github.io/yidong/">
                             <img src="img/gallery_01.jpg" alt="" class="xu">
                             <div class="zheb">
                                 <div class="dak">
@@ -158,7 +157,7 @@
                                         <div class="yuan"><i class="liu iconfont icon-sousuo"></i></div>
                                         <div class="yuan"><i class="liu iconfont icon-lianjie"></i></div>
                                     </div>
-                                    <h2>Project Title Goes Here</h2>
+                                    <h2>移动</h2>
                                     <p>Logo Design</p>
                                 </div>
                             </div>
@@ -169,11 +168,50 @@
                 <div class="prev">< </div>
             </div>
         </div>
+        </div>
     </div>
     <div class="section">
-        <div class="cd"></div>
+        <div class="cd">
+            <div class="jie">
+                <h1>掌握技能</h1>
+                <p>我掌握html，css,Adobe Illustrator,网页设计,photoshop,响应式</p>
+            </div>
+            <div class="item">
+                        <div class="web">
+                            <i class="mc iconfont icon-icon-test"></i>
+                            <h4>HTML</h4>
+                            <p>我以熟练掌握html的网页布局,做过一些小型的电商网站</p>
+                        </div>
+                        <div class="web">
+                            <i class="mc iconfont icon-js"></i>
+                            <h4>CSS</h4>
+                            <p>我以熟练掌握css与html结合的网页布局,对css了解还是比较特澈的</p>
+                        </div>
+                        <div class="web">
+                            <i class="mc iconfont icon-adb-illustrator"></i>
+                            <h4>Adobe Illustrator</h4>
+                            <p>我学习过Adobe Illustrator的使用，已基本掌握它的使用方式</p>
+                        </div>
+                        <div class="web">
+                            <i class="mc iconfont icon-wysj"></i>
+                            <h4>网页设计</h4>
+                            <p>我已经能够熟练的使用网页设计来布局</p>
+                        </div>
+                        <div class="web">
+                            <i class="mc iconfont icon-h5"></i>
+                            <h4>photoshop</h4>
+                            <p>我能熟练的使用photoshop来对图片进行各种方式的处理</p>
+                        </div>
+                        <div class="web">
+                            <i class="mc iconfont icon-xiangyingshi"></i>
+                            <h4>响应式</h4>
+                            <p>我能够使用网页使其在不同的屏幕上都可以流畅的显示</p>
+                        </div>
+            </div>
+        </div>
     </div>
     <div class="section">
+        <div class="rw">
         <div class="ta">
             <div class="container">
                 <div class="muxu">
@@ -214,6 +252,7 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
     <!--5屏完-->
 </div>
@@ -241,11 +280,23 @@
                 $(".two-left").css("transform", "translateX(0)");
                 $(".two-right").css("transform", "translateX(0)");
             }
+            if (index === 3) {
+                $(".scene ul")
+                    .css("transform", "scale(1)")
+                $(".xiamu")
+                    .css("transform","translateY(0)")
+            }
         },
         onLeave: function (index) {
             if (index === 2) {
                 $(".two-left").css("transform", "translateX(-1000px)");
                 $(".two-right").css("transform", "translateX(1000px)");
+            }
+            if(index===3){
+                $(".scene ul")
+                    .css("transform", "scale(0)")
+                $(".xiamu")
+                    .css("transform","translateY(-500)")
             }
         }
     });
